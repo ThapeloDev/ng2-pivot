@@ -1,0 +1,251 @@
+.con-right {
+  position: absolute;
+  z-index: 101;
+  top: 366px;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 267px;
+  height: 87%;
+  font-size: 15px;
+  .hd {
+    width: 95%;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 10px;
+  }
+  .chart-title,
+  .chart-filter,
+  .chart-remarks {
+    height: 75px;
+    padding: 10px;
+    border-bottom: 1px solid #dee0e1;
+    .bd {
+      width: 100%;
+      height: 33px;
+      border: 1px solid #e1e4e8;
+      border-radius: 3px;
+      background: #fff;
+      font-size: 15px;
+      input {
+        width: 90%;
+        padding-left: 20px;
+        margin-top: 8px;
+        border: none;
+        outline: none;
+        font-size: 13px;
+      }
+    }
+  }
+  .chart-type {
+    padding: 10px;
+    border-bottom: 1px solid #dee0e1;
+    ul {
+      width: 100%;
+      height: 100px;
+    }
+    li {
+      width: 46px;
+      height: 46px;
+      float: left;
+    }
+    a {
+      display: block;
+      position: relative;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      border: 2px solid #d5dbdb;
+    }
+    .type-line-chart {
+      a {
+        i {
+          background-position: 0 0;
+        }
+        
+      }
+    }
+    .type-pie-chart {
+      a {
+        i {
+          background-position: -22px 0;
+        }
+        
+      }
+    }
+    .type-ring-chart {
+      a {
+        i {
+          background-position: -44px 0;
+        }
+        
+      }
+    }
+    .type-rose-chart {
+      a {
+        i {
+          top: 12px;
+          background-position: -66px 0;
+        }
+        
+      }
+    }
+    .type-bar-chart {
+      a {
+        i {
+          background-position: -88px 0;
+        }
+        
+      }
+    }
+    .type-barY-chart {
+      a {
+        i {
+          background-position: -110px 0;
+        }
+        
+      }
+    }
+    .type-table-chart {
+      a {
+        i {
+          background-position: -132px 0;
+        }
+        
+      }
+    }
+    .available {
+      &.type-line-chart {
+        a {
+          &:hover{
+            background: #f7f9fa;
+          }
+          &.active{
+            background: #fff;
+            border:2px solid #98a4a6;
+          }
+          i {
+            background-position: 0 -22px;
+          }
+        }
+      }
+      &.type-pie-chart {
+        a {
+          &:hover{
+            background: #f7f9fa;
+          }
+          &.active{
+            background: #fff;
+            border:2px solid #98a4a6;
+          }
+          i {
+            background-position: -22px -22px;
+          }
+        }
+      }
+      &.type-ring-chart {
+        a {
+          &:hover{
+            background: #f7f9fa;
+          }
+          &.active{
+            background: #fff;
+            border:2px solid #98a4a6;
+          }
+          i {
+            background-position: -44px -22px;
+          }
+        }
+      }
+      &.type-rose-chart {
+        a {
+          &:hover{
+            background: #f7f9fa;
+          }
+          &.active{
+            background: #fff;
+            border:2px solid #98a4a6;
+          }
+          i {
+            top: 12px;
+            background-position: -66px -22px;
+          }
+        }
+      }
+      &.type-bar-chart {
+        a {
+          &:hover{
+            background: #f7f9fa;
+          }
+          &.active{
+            background: #fff;
+            border:2px solid #98a4a6;
+          }
+          i {
+            background-position: -88px -22px;
+          }
+        }
+      }
+      &.type-barY-chart {
+        a {
+          &:hover{
+            background: #f7f9fa;
+          }
+          &.active{
+            background: #fff;
+            border:2px solid #98a4a6;
+          }
+          i {
+            background-position: -110px -22px;
+          }
+        }
+      }
+      &.type-table-chart {
+        a {
+          &:hover{
+            background: #f7f9fa;
+          }
+          &.active{
+            background: #fff;
+            border:2px solid #98a4a6;
+          }
+          i {
+            background-position: -132px -22px;
+          }
+        }
+      }
+    }
+  }
+  .chart-filter {
+    .hd {
+      position: relative;
+      i {
+        right: 10px;
+        top: 10px;
+        background-position: -34px 0;
+      }
+    }
+    .bd {
+      background: #dee0e1;
+      font-size: 13px;
+      line-height: 33px;
+      text-indent: 20px;
+    }
+  }
+  .chart-remarks {
+    height: 135px;
+    .bd {
+      height: 66px;
+    }
+    textarea {
+      width: 90%;
+      padding-left: 20px;
+      margin-top: 8px;
+      border: none;
+      outline: none;
+      font-size: 13px;
+      resize: none;
+    }
+  }
+}

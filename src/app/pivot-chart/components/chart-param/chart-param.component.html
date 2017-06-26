@@ -1,0 +1,29 @@
+<div class="con-right">
+    <div class="chart-title">
+        <div class="hd">图表标题</div>
+        <div class="bd">
+            <input type="text" (change)="titleCh($event)" class="input-text-block" placeholder="未命名图表">
+        </div>
+    </div>
+    <div class="chart-type">
+        <div class="hd ">图表类型</div>
+        <div class="bd">
+            <ul>
+                <li *ngFor="let chart of chartTypes" 
+                    class="type-{{chart.type}}-chart {{chart.canClick ? 'available' : ''}}">
+                    <a [href]="" 
+                        (click)="chartClick(chart)"
+                        class="{{chart.type == clickedChartType ? 'active' : ''}}">
+                        <i class="icon-chart-type"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="chart-remarks">
+        <div class="hd">图表备注</div>
+        <div class="bd">
+            <textarea [(ngModel)]="mark" type="text" class="input-text-block"></textarea>
+        </div>
+    </div>
+</div>

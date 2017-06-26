@@ -1,0 +1,94 @@
+<div>
+    <div class="header">
+        <a [href]="" class="back">
+            <i class="icon-dashboard"></i>
+        </a>
+        <p></p>
+        <span>编辑图表</span>
+        <div class="help">
+            <i class="icon-dashboard"></i>
+            <a [href]="">帮助</a>
+        </div>
+    </div>
+    <div class="container-box">
+        <div class="container">
+            <div class="con-left">
+                <!--<div class="worksheet">
+                    <h4>工作表</h4>
+                    <div class="scroll-box">
+                        <ul>
+                            <li>
+                                <span>销售列表计算器</span>
+                                <i class="icon-dashboard"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+                <div 
+                    dnd-droppable 
+                    (onDropSuccess)="fieldDroped($event)"
+                    class="field">
+                    <h4>
+                        <span>字段</span>
+                        <!--<i class="icon-dashboard"></i>-->
+                    </h4>
+                    <div class="search-input-box">
+                        <div class="search-input">
+                            <input type="text" [(ngModel)]="fieldName" /><i class="icon-result-left icon-dashboard"></i>
+                        </div>
+                    </div>
+                    <div 
+                        *ngFor="let header of headers | fieldFilt:fieldName" 
+                        class="field-sroll-box">
+                        <h5>{{header.type}}</h5>
+                        <ul class="field-box">
+                            <li *ngFor="let field of header.fields" [hidden]="field._noshow || field._filted">
+                                <span>
+                                    <div dnd-draggable 
+                                        [dragData]="field">
+                                        {{field.name}}
+                                    </div>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="con-middle">
+                <div 
+                    dnd-droppable (onDropSuccess)="dimensionDroped($event)" 
+                    class="dimension ">
+                    <span class="con-span">维度 ：</span>
+                    <ul class="drag-list">
+                        <li 
+                            class="drag-list-li" 
+                            *ngFor="let field of cql_ast.SELECT | valFields:'dimensions';let i = index">
+                            <div dnd-draggable [dragData]="field">
+                                <dimension [field]="field" (orderby)="orderby($event)"></dimension>
+                            </div>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li><a [href]="" (click)="clear('dimensions')">清空</a></li>
+                    </ol>
+                </div>
+                <div dnd-droppable (onDropSuccess)="valueDroped($event)" class="num">
+                    <span class="con-span">数值 ：</span>
+                    <ul class="drag-list">
+                        <li class="drag-list-li" *ngFor="let field of cql_ast.SELECT | valFields:'values'">
+                            <div dnd-draggable [dragData]="field">
+                                <value [field]="field" (doFunc)="updateAST()" (orderby)="orderby($event)"></value>
+                            </div>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li><a [href]="" (click)="clear('values')">清空</a></li>
+                    </ol>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

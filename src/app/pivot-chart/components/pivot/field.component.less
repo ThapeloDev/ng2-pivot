@@ -1,0 +1,58 @@
+ span {
+     padding: 0 10px;
+     border-radius: 5px;
+     max-width: 200px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: inline-block;
+ }
+
+ i {
+     right: 10px;
+     top: 10px;
+     background-position: -146px -17px;
+ }
+
+ .drag-list-layer {
+     position: absolute;
+     top: 24px;
+     left: 0;
+     width: 100%;
+    //  height: 57px;
+     border: 1px solid #ecf0f1;
+     background: #fff;
+     z-index: 999;
+     color: #333;
+     padding-top: 4px;
+     li {
+         position: relative;
+         &:hover {
+             background-color: #ecf0f1;
+         }
+         .sort-list,
+         .alin-list {
+             position: absolute;
+             left: 94%;
+             top: -1px;
+             width: 100%;
+            //  height: 91px;
+             border: 1px solid #ecf0f1;
+             background: #fff;
+             z-index: 999;
+             color: #333;
+             li:hover {
+                 background-color: #f7f9fa;
+             }
+         }
+         .sort-list {
+             top: 0;
+         }
+     }
+     i {
+         background-position: -136px 0;
+         width: 16px;
+         height: 16px;
+         right: 0;
+         top: 6px;
+     }
+ }

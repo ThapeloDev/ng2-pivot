@@ -1,0 +1,249 @@
+/* You can add global styles to this file, and also import other style files */
+@radius : 2px;
+@input-bg : rgb(254, 255, 255);
+@border-color: #d5d9dc;
+@button-color: #4848a3;
+@table-th-bg:#ecf0f1;
+@table-td-bg:#f7f9fa;
+@table-th-height: 30px;
+
+@tab-font-color:rgb(69, 79, 110);
+
+
+@nav-height:60px;
+@nav-line-height:60px;
+body{
+	font-family: 'Microsoft YaHei',Arial,"宋体",Helvetica,sans-serif;
+	font-size: 12px;
+	width: 100%;
+}
+
+a{
+	cursor: pointer;
+}
+.container{
+	margin: 0 auto;
+	width: 100%;	
+	padding:0;
+
+}
+.input {
+	width:100%;
+	background-color: @input-bg;
+	border-radius: @radius;
+	border: 1px solid @border-color;
+}
+.cl{
+	clear: both;
+	zoom:1;
+	overflow: hidden;
+	display: block;
+}
+
+.arrow{
+	width: 0;
+   height:0;
+   display: inline-block;
+   padding: 0 5px;
+}
+.arrow-right{
+   .arrow;
+   border-top: 5px solid transparent;
+   border-left: 4px solid red;
+   border-bottom: 5px solid transparent;
+}
+
+.arrow-right{
+   .arrow;
+   border-top: 4px solid transparent;
+   border-left: 5px solid red;
+   border-right: 5px solid transparent;
+}
+
+.btn-def{
+	background-color: @button-color;
+	text-align: center;
+	height: 33px;
+	line-height: 33px;
+	border:0;
+	cursor: pointer;
+	font-size: 14px;
+	color: #ffffff;
+	outline: none;
+}
+
+.table{
+	display: table; 
+	width: 100%;
+	border-collapse: collapse;
+
+}
+.table-th{
+	display: table-cell;
+	font-weight: bold;
+	height: 30px;
+	border: 1px solid @border-color;
+	text-align: left;
+	vertical-align: middle;
+	background-color: @table-th-bg;
+}
+.table-tr {
+	display: table-row;
+    height: 30px;
+}
+
+.table-td{
+	display: table-cell;
+	//height: 100%;
+	border: 1px solid @border-color;
+	text-align: center;
+	vertical-align: middle;
+	background-color: @table-td-bg;
+	word-break:break-all;
+}
+
+.tab{
+	float: left;
+    border:1px solid @border-color;
+    margin-right: 2px;
+	a{	
+		display: inline-block;
+		width: 60px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		&:hover{
+			text-decoration: none;
+			color: @tab-font-color;
+		}
+	}
+	&:last-child{
+		
+	}
+}
+// .icon-result{
+// 	background-image: url('./result.png');
+// 	position: absolute;
+// 	background-repeat: no-repeat;
+// 	display: inline-block;
+// }
+.icon-chart-type {
+  display: inline-block;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 22px;
+  height: 22px;
+  background-image: url("icon-chart.png");
+  cursor: pointer;
+}
+// .icon-dashboard{
+// 	background-image: url('./icon-dashboard.png');
+// 	position: absolute;
+// 	background-repeat: no-repeat;
+// 	display: inline-block;
+// 	height: 17px;
+// 	width: 17px;
+// }
+
+.width-200{
+	width: 200px !important;
+}
+.width-50{
+	width: 50px !important;
+}
+
+.width-30{
+	width: 30px !important;
+}
+
+.blue-title{
+	background-color: #5f7aaa;
+}
+
+
+/*Navigator相关样式*/
+@nav-content-width:100px;
+@nav-border-color:rgba(255, 255, 255, 0.2);
+.nav-content{
+	line-height: @nav-line-height;
+	display: inline-block;
+	//float: left;
+	font-size: 14px;
+	a{
+		display: inline-block;
+		line-height: @nav-line-height;
+		text-align: center;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+// .a-web-nav{
+// 	width: 100%;
+// 	height: 60px;
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+// 	min-width: 1200px;
+// 	background-image: url('./nav.jpg');
+// 	.nav-logo{
+// 		width: 240px;
+// 		padding-left: 20px;
+// 		display: inline-block;
+// 		float: left;
+// 		a{
+// 			display: inline-block;
+// 			height: 60px;
+// 			line-height: 60px;
+// 			padding-top: 13px;
+// 		}
+// 	}
+// 	.header-tab{
+// 		color: #fff;
+// 		width:@nav-content-width;
+// 		border-right: 1px solid @nav-border-color; 
+// 		&:first-child{
+// 			border-left: 1px solid @nav-border-color; 
+// 		}
+// 	}
+// 	.icon-logo{
+// 		background-image: url('./logo.png');
+// 		background-repeat: no-repeat;
+// 		display: inline-block;
+// 		width: 200px;
+// 		height: 35px;
+// 	}
+// 	.nav-tabs{
+// 		font-size: 0;
+// 		display: inline-block;
+// 		a{
+// 			display: block;
+// 			&:hover{
+// 				background-color: rgba(0, 0, 0, .15);
+// 			}
+// 		}
+// 		.nav-active{
+// 			background-color: rgba(0, 0, 0, .15);
+// 		}
+// 	}
+// }
+// .icon-top{
+// 	background: url("icon-top.png") no-repeat center center #d6d9da; ;
+// }
+.theme-bg-color{
+	background: #4848a3;
+	color:#fff;
+}
+.theme-color{
+	color:#4848a3;
+}
+.DN{
+	display: none;
+}
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}

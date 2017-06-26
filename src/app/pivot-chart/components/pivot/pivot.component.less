@@ -1,0 +1,553 @@
+.icon-dashboard {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-image: url("icon-dashboard.png");
+  cursor: pointer;
+}
+
+.icon-chart-type {
+  display: inline-block;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  width: 22px;
+  height: 22px;
+  background-image: url("icon-chart.png");
+  cursor: pointer;
+}
+
+body {
+  background: #ecf0f1;
+  min-width: 1330px;
+  overflow: scroll;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-width: 1330px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f7f9fa;
+  box-shadow: 0 8px 15px #d8dbdc;
+  z-index: 99;
+  .back {
+    float: left;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 20px;
+    background: #98a4a6;
+    i {
+      width: 16px;
+      height: 10px;
+      background-position: 0 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  p {
+    float: left;
+    width: 1px;
+    height: 20px;
+    background: #dee0e1;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  span {
+    display: inline-block;
+    font-size: 19px;
+    text-indent: 20px;
+    color: #6b6b6b;
+  }
+  .help {
+    float: right;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    line-height: 56px;
+    i {
+      background-position: -51px 0;
+      left: 0;
+      top: 21px;
+    }
+    a {
+      display: inline-block;
+      width: 32px;
+      height: 20px;
+      margin-left: 20px;
+      font-size: 13px;
+      text-decoration: underline;
+      color: #4848a3;
+    }
+  }
+}
+
+.container-box {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 743px;
+  margin-top: 60px;
+  .con-left {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 255px;
+    height: 743px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .worksheet {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #dee0e1;
+      h4 {
+        text-indent: 20px;
+      }
+      .scroll-box {
+        width: 100%;
+        ul {
+          li {
+            position: relative;
+            span {
+              display: inline-block;
+              width: 150px;
+              padding-left: 40px;
+              padding-top: 20px;
+              font-size: 13px;
+            }
+            i {
+              position: absolute;
+              right: 20px;
+              top: 20px;
+              background-position: -17px 0;
+            }
+          }
+        }
+      }
+    }
+    .field {
+      padding-top: 20px;
+      position: relative;
+      height: 700px;
+      width: 100%;
+      h4 {
+        position: relative;
+        span {
+          display: inline-block;
+          text-indent: 20px;
+        }
+      }
+      .search-input-box {
+        _box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+        margin-top: 14px;
+        margin-left: 9px;
+        .search-input {
+          display: inline-block;
+          height: 34px;
+          position: relative;
+          text-align: center;
+          background-color: #fff;
+          border: 1px solid #e1e4e8;
+          border-radius: 3px;
+          cursor: pointer;
+          line-height: 30px;
+          i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 9px;
+            background-position: -68px 0;
+            &nput {
+              display: inline-block;
+              height: 30px;
+              width: 220px;
+              margin: 0;
+              text-indent: 10px;
+              line-height: 30px;
+              border: 0;
+              outline: none;
+            }
+          }
+        }
+      }
+      .field-sroll-box {
+        width: 100%;
+        max-height: 200px;
+        overflow: scroll;
+        margin: 10px 0;
+        border-bottom: 1px solid #fff;
+        h5 {
+          width: 100%;
+          text-align: center;
+          float: left;
+        }
+        .field-box {
+          margin-left: 5%;
+          width: 90%;
+          margin-top: 20px;
+          li {
+            height: 42px;
+            line-height: 42px;
+            width: 100%;
+            span {
+              display: inline-block;
+              font-size: 13px;
+              line-height: 42px;
+              height: 42px;
+              div {
+                height: 22px;
+                line-height: 22px;
+                padding: 0 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .con-middle {
+    position: absolute;
+    right: 0;
+    height: 11%;
+    left: 255px;
+    top: 0;
+    padding: 0 20px;
+    font-size: 13px;
+    background-color: #f7f9fa;
+    box-shadow: 5px 0 20px #d8dbdc;
+    margin-right: 266px;
+    .dimension,
+    .num {
+      position: relative;
+      padding: 1px 0 6px;
+      line-height: 40px;
+      height: 40px;
+      border-bottom: 1px solid #dee0e1;
+      .con-span {
+        float: left;
+        display: inline-block;
+        width: 50px;
+      }
+      .drag-list {
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 22px;
+        line-height: 22px;
+        .drag-list-li {
+          float: left;
+          padding-right: 20px;
+          position: relative;
+          border-radius: 3px;
+          background: #4848a2;
+          color: #fff;
+          margin-right: 5px; 
+          height: 20px;
+          // span{
+          //   padding:0 10px;
+          //   border-radius: 5px;
+          // }
+          // i {
+          //   right: 10px;
+          //   top: 10px;
+          //   background-position: -146px -17px;
+          // }
+          // .drag-list-layer {
+          //   position: absolute;
+          //   top: 24px;
+          //   left: 0;
+          //   width: 100%;
+          //   height: 57px;
+          //   border: 1px solid #ecf0f1;
+          //   background: #fff;
+          //   z-index: 999;
+          //   color: #333;
+          //   padding-top: 4px;
+          //   li {
+          //     position: relative;
+          //     padding-left: 16px;
+          //     &:hover {
+          //       background-color: #ecf0f1;
+          //     }
+          //     .sort-list,
+          //     .alin-list {
+          //       position: absolute;
+          //       left: 90px;
+          //       top: -1px;
+          //       width: 100%;
+          //       height: 91px;
+          //       border: 1px solid #ecf0f1;
+          //       background: #fff;
+          //       z-index: 999;
+          //       color: #333;
+          //       li:hover {
+          //         background-color: #f7f9fa;
+          //       }
+          //     }
+          //     .sort-list {
+          //       top: 0;
+          //     }
+          //   }
+          //   i {
+          //     background-position: -136px 0;
+          //     width: 16px;
+          //     height: 16px;
+          //     right: 0;
+          //     top: 6px;
+          //   }
+          // }
+        }
+      }
+      ol {
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 22px;
+        line-height: 22px;
+        a {
+          color: #4848a2;
+        }
+      }
+    }
+  }
+}
+
+.con-right {
+  position: absolute;
+  z-index: 101;
+  top: 366px;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 267px;
+  height: 87%;
+  font-size: 15px;
+  .hd {
+    width: 95%;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 10px;
+  }
+  .chart-title,
+  .chart-filter,
+  .chart-remarks {
+    height: 75px;
+    padding: 10px;
+    border-bottom: 1px solid #dee0e1;
+    .bd {
+      width: 100%;
+      height: 33px;
+      border: 1px solid #e1e4e8;
+      border-radius: 3px;
+      background: #fff;
+      font-size: 15px;
+      input {
+        width: 90%;
+        padding-left: 20px;
+        margin-top: 8px;
+        border: none;
+        outline: none;
+        font-size: 13px;
+      }
+    }
+  }
+  .chart-type {
+    padding: 10px;
+    border-bottom: 1px solid #dee0e1;
+    ul {
+      width: 100%;
+      height: 100px;
+    }
+    li {
+      width: 46px;
+      height: 46px;
+      float: left;
+    }
+    a {
+      display: block;
+      position: relative;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      border: 2px solid #ecf0f1;
+      &:hover {
+        border: 2px solid #98a4a6;
+        background: #fff;
+      }
+      &.active {
+        border: 2px solid #98a4a6;
+        background: #fff;
+      }
+    }
+    .type-line-chart {
+      a {
+        i {
+          background-position: 0 0;
+        }
+        &:hover {
+          i {
+            background-position: 0 -22px;
+          }
+        }
+        &.active {
+          i {
+            background-position: 0 -22px;
+          }
+        }
+      }
+    }
+    .type-pie-chart {
+      a {
+        i {
+          background-position: -22px 0;
+        }
+        &:hover {
+          i {
+            background-position: -22px -22px;
+          }
+        }
+        &.active {
+          i {
+            background-position: -22px -22px;
+          }
+        }
+      }
+    }
+    .type-doughnut-chart {
+      a {
+        i {
+          background-position: -44px 0;
+        }
+        &:hover {
+          i {
+            background-position: -44px -22px;
+          }
+        }
+        &.active {
+          i {
+            background-position: -44px -22px;
+          }
+        }
+      }
+    }
+    .type-dashboard-chart {
+      a {
+        i {
+          top: 12px;
+          background-position: -66px 0;
+        }
+        &:hover {
+          i {
+            background-position: -66px -22px;
+          }
+        }
+        &.active {
+          i {
+            background-position: -66px -22px;
+          }
+        }
+      }
+    }
+    .type-clustered-bar-chart {
+      a {
+        i {
+          background-position: -88px 0;
+        }
+        &:hover {
+          i {
+            background-position: -88px -22px;
+          }
+        }
+        &.active {
+          i {
+            background-position: -88px -22px;
+          }
+        }
+      }
+    }
+    .type-bar-chart {
+      a {
+        i {
+          background-position: -110px 0;
+        }
+        &:hover {
+          i {
+            background-position: -110px -22px;
+          }
+        }
+        &.active {
+          i {
+            background-position: -110px -22px;
+          }
+        }
+      }
+    }
+    .type-form-chart {
+      a {
+        i {
+          background-position: -132px 0;
+        }
+        &:hover {
+          i {
+            background-position: -132px -22px;
+          }
+        }
+        &.active {
+          i {
+            background-position: -132px -22px;
+          }
+        }
+      }
+    }
+  }
+  .chart-filter {
+    .hd {
+      position: relative;
+      i {
+        right: 10px;
+        top: 10px;
+        background-position: -34px 0;
+      }
+    }
+    .bd {
+      background: #dee0e1;
+      font-size: 13px;
+      line-height: 33px;
+      text-indent: 20px;
+    }
+  }
+  .chart-remarks {
+    height: 135px;
+    .bd {
+      height: 66px;
+    }
+    textarea {
+      width: 90%;
+      padding-left: 20px;
+      margin-top: 8px;
+      border: none;
+      outline: none;
+      font-size: 13px;
+      resize: none;
+    }
+  }
+}
+.dnd-drag-over {
+    background-color: #fff;
+}
